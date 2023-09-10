@@ -9,14 +9,14 @@ public class ExcelDataProvider {
 	XSSFWorkbook wb;
 	public ExcelDataProvider() throws Exception {
 		
-		String excelpath= "C:\\KIJKSluiterProject\\KIJKSluiterProj\\TestData\\ExcelData.xlsx";
+		String excelpath= System.getProperty("user.dir")+"\\TestData\\ExcelData.xlsx";
 		File src = new File(excelpath);
 		FileInputStream file = new FileInputStream(src);
 		
 	     wb = new XSSFWorkbook(file);//for reading excelsheet
 		
 	}
-	
+
 	public String getStringData(String sheetname, int row, int cell) {
 		return wb.getSheet(sheetname).getRow(row).getCell(cell).getStringCellValue();
 	}
