@@ -12,6 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 //import io.github.bonigarcia.wdm.WebDriverManager;
@@ -31,7 +32,7 @@ public class BaseClass {
 	}
 	@Parameters({"Browser"})
 	@BeforeMethod
-	public void InitializationBrowser(String Browser) {
+	public void InitializationBrowser(@Optional String Browser) {
 		
 		//WebDriverManager.chromedriver().setup();
 		//System.setProperty("webdriver.chrome.driver", "C:/SeleniumDrivers/chromedriver-win32/chromedriver.exe");
