@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.Utility.Listeners"></listener>
+		<listener class-name="com.Utility.Transformer"></listener>
+	</listeners>
+  <test thread-count="5" name="Test1">
+	  <parameter name="Browser" value="Chrome"></parameter>
+    <classes>
+      <class name="com.Test.KIIJKSluiter_WelcomePage"/>
+      <class name="com.Utility.RetryAnalyser"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Test2">
+	  <parameter name="Browser" value="Edge"></parameter>
+    <classes>
+      <class name="com.Test.KIIJKSluiter_WelcomePage"/>
+      <class name="com.Utility.RetryAnalyser"/>
+    </classes>
+  </test> <!-- Test -->   
+</suite> <!-- Suite -->
